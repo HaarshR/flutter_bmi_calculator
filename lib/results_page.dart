@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbmicalculator/bottom_button.dart';
+import 'package:flutterbmicalculator/reusable_card.dart';
 import 'constants.dart';
 
 class ResultsPage extends StatelessWidget {
@@ -10,6 +12,7 @@ class ResultsPage extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
             child: Text(
@@ -17,6 +20,35 @@ class ResultsPage extends StatelessWidget {
               style: kTitleTextStyle,
             ),
           ),
+          Expanded(
+            flex: 5,
+            child: ReusableCard(
+              color: kActiveCardColor,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'NORMAL',
+                    style: kResultTextStyle,
+                  ),
+                  Text(
+                    '22.1',
+                    style: kBMITextStyle,
+                  ),
+                  Text(
+                    'You are fat ashdijhkdfshfkhsdkfhjkh sjhf hkdhsf d fshdhh',
+                    style: kBodyTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          BottomButton(
+            label: 'RE-CALCULATE YOUR BMI',
+            onTap: () {},
+          )
         ],
       ),
     );
