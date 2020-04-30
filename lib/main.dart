@@ -12,7 +12,11 @@ class BMICalculator extends StatelessWidget {
         accentColor: Color(0xFF008080),
         sliderTheme: SliderThemeData(
           thumbColor: Color(0xFF008080),
+          thumbShape: RoundSliderThumbShape(
+            enabledThumbRadius: 10.0,
+          ),
           trackHeight: 4.0,
+          overlayColor: Color(0x29009e9e),
           activeTrackColor: Color(0xFF008080),
           inactiveTrackColor: Color(0xFF8D8E98),
         ),
