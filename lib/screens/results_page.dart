@@ -4,6 +4,14 @@ import 'package:flutterbmicalculator/components/reusable_card.dart';
 import '../constants.dart';
 
 class ResultsPage extends StatelessWidget {
+  ResultsPage(
+      {@required this.bmiResult,
+      @required this.resultText,
+      @required this.interpretation});
+
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,9 +23,13 @@ class ResultsPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
-            child: Text(
-              'Your Result',
-              style: kTitleTextStyle,
+            child: Container(
+              padding: EdgeInsets.all(15.0),
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'Your Result',
+                style: kTitleTextStyle,
+              ),
             ),
           ),
           Expanded(
@@ -29,15 +41,15 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'NORMAL',
+                    resultText.toUpperCase(),
                     style: kResultTextStyle,
                   ),
                   Text(
-                    '22.1',
+                    bmiResult,
                     style: kBMITextStyle,
                   ),
                   Text(
-                    'You are fat ashdijhkdfshfkhsdkfhjkh sjhf hkdhsf d fshdhh',
+                    interpretation,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   ),
@@ -47,7 +59,9 @@ class ResultsPage extends StatelessWidget {
           ),
           BottomButton(
             label: 'RE-CALCULATE YOUR BMI',
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+            },
           )
         ],
       ),
