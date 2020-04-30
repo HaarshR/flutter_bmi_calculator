@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'icon_content.dart';
 
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color(0xFF008080);
@@ -25,11 +27,19 @@ class _InputPageState extends State<InputPage> {
                   Expanded(
                     child: ReusableCard(
                       color: activeCardColor,
+                      child: IconContent(
+                        icon: FontAwesomeIcons.mars,
+                        label: 'MALE',
+                      ),
                     ),
                   ),
                   Expanded(
                     child: ReusableCard(
                       color: activeCardColor,
+                      child: IconContent(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'FEMALE',
+                      ),
                     ),
                   ),
                 ],
