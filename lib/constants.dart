@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+const kMinimumHeight = 120.0;
+const kMaximumHeight = 220.0;
+
 const kBottomContainerHeight = 80.0;
-const kBottomContainerColor = Color(0xFF008080);
 const kActiveCardColor = Color(0xFF1D1E33);
 const kInactiveCardColor = Color(0xFF111328);
 
