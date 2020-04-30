@@ -16,6 +16,7 @@ All this is packaged with a clean UI.
 ## Download and Setup
 
 To download and setup this project, make sure **Android Studio and the Flutter SDK** are already setup.
+
 *Flutter Get Started:* [flutter.dev/docs/get-started/install](https://flutter.dev/docs/get-started/install)
 
 1. Open Android Studio
